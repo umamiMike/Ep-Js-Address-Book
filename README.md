@@ -1,8 +1,9 @@
 # _Address Book Exercises in Javascript_
-## _Finds all instances of a word in the speech and replaces it with what you choose!_
-### By Mike Chastain and Sam Martinez
-## Description
 
+### By Mike Chastain and Sam Martinez
+
+## Description
+_[Live Demo ] (http://umamimike.github.io/Ep-Js-Address-Book/)_
 
 ## Technologies Used
 _This project makes use of: [Mocha](https://mochajs.org/), and [Chai](http://chaijs.com/) as testing-frameworks. And has a dependency for jQuery._

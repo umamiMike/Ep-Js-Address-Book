@@ -16,10 +16,20 @@ body {
 
 }
 
+ul {
+	list-style-type: none;
+}
+
 /*Address Book Css ================*/
 
 #show-contact {
-display: none;
+	display: none;
+	font-family:initial;
+	border-style:dashed;
+	border-width:thin;
+	margin:16px;
+	padding:16px;
+	background:khaki;
 }
 
 .contact {
@@ -68,13 +78,13 @@ word-wrap: break-word;                 /* IE 5.5+ and up */
 
 
 .site__footer {
-	background: #7e8e97;
-	border-top: 1px solid #2d3438;
+	background: #d5803b;
+	border-top: 1px solid #ebaa7f;
 }
 
 .footer__content {
 	padding: 20px;
-	color: #2d3438;
+	color: #fff;
 }
 
 /* typography =============== */
