@@ -27,12 +27,13 @@ $(document).ready(function() {
                 firstName: inputtedFirstName,
                 lastName: inputtedLastName,
                 addresses: []
-            };
+    };
 
         $(".new-address").each(function(){
             var iStreet = $(this).find("input.new-street").val();
             var iCity = $(this).find("input.new-city").val();
             var iState = $(this).find("input.new-state").val();
+
                 var newAddress = {
                     street: iStreet,
                     city: iCity,
@@ -43,21 +44,22 @@ $(document).ready(function() {
                 });
 
 
-        $("ul#contacts").append( "<li><span class = 'contact'>" + newContact.firstName + " " + newContact.lastName + "</span></li>" )
+        $("ul#contacts").append( "<li><span class = 'contact'>" + newContact.firstName + " " + newContact.lastName + "</span></li>" );
 
 
 
         $(".contact").last().click(function() {
           $("#show-contact").show();
 
-          $("#show-contact h2").text(newContact.firstName + " " + newContact.lastName);
+          $("#show-contact h2").text(newContact.firstName);
           $(".first-name").text(newContact.firstName);
           $(".last-name").text(newContact.lastName);
 
           $("ul#addresses").text("");
           newContact.addresses.forEach(function(address) {
-              $("ul#addresses").append("<li>" + address.street + ", " + address.state + "</li>");
+              $("ul#addresses").append("<li>" + address.street + ", " + address.city + ", " + address.state + "</li>");
           });
+        });//ends contact click function
 
         $("input#new-first-name").val("");
         $("input#new-last-name").val("");
@@ -65,11 +67,5 @@ $(document).ready(function() {
         $("input.new-city").val("");
         $("input.new-state").val("");
 
-        });//ends contact click function
-
-
   });//ends form submit function
-
-
-
 });//ends document ready function
