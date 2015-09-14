@@ -16,6 +16,21 @@ body {
 
 }
 
+/*Address Book Css ================*/
+
+#show-contact {
+display: none;
+}
+
+.contact {
+cursor: pointer;
+color: #0088cc;
+}
+
+.contact:hover {
+text-decoration: underline;
+}
+
 /* layout =================== */
 
 .site__title, nav, section, .footer__content {
