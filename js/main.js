@@ -34,26 +34,11 @@ function resetFields(){
   $("div.new-address").not(':first').remove();
 }
 
-function formDefinition(){
-  var formDefinition = '<div class="new-address">' +
-                               '<div class="form-group">' +
-                                 '<label for="new-street">Street</label>' +
-                                 '<input type="text" class="form-control new-street">' +
-                               '</div>' +
-                               '<div class="form-group">' +
-                                 '<label for="new-city">City</label>' +
-                                 '<input type="text" class="form-control new-city">' +
-                               '</div>' +
-                               '<div class="form-group">' +
-                                 '<label for="new-state">State</label>' +
-                                 '<input type="text" class="form-control new-state">' +
-                               '</div>' +
-                             '</div>'
-}
+
 
 function showContacts(newContact) {
 
-      $("#show-contact").show();
+      $("#show-contact").show(600);
 
       $("#show-contact h2").text(newContact.firstName);
       $(".first-name").text(newContact.firstName);
@@ -69,7 +54,8 @@ $(document).ready(function() {
 
 
     $("#add-address").click(function() {
-        $("#new-addresses").append(formDefinition());
+
+        $(".new-address:last").clone().find("input:text").val("").end().last().appendTo("#new-addresses");
       });
 
     $("form#new-contact").submit(function(event) {
@@ -82,6 +68,7 @@ $(document).ready(function() {
         var newContact = new Contact(inputtedFirstName, inputtedLastName);
 
         $(".new-address").each(function(){
+            var iType = $(this).find("input.new-type").val();
             var iStreet = $(this).find("input.new-street").val();
             var iCity = $(this).find("input.new-city").val();
             var iState = $(this).find("input.new-state").val();
@@ -89,7 +76,8 @@ $(document).ready(function() {
                 var newAddress = {
                     street: iStreet,
                     city: iCity,
-                    state: iState
+                    state: iState,
+                    type: iType
                 }
 
                 newContact.addresses.push(newAddress);
