@@ -1,6 +1,6 @@
 # _Address Book Exercises in Javascript_
 
-### By Mike Chastain and Sam Martinez
+### By Mike Chastain and Adam  Won
 
 ## Description
 _[Live Demo ] (http://umamimike.github.io/Ep-Js-Address-Book/)_
